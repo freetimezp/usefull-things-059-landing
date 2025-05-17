@@ -29,17 +29,20 @@ function venueHover(e) {
         const tl = gsap.timeline();
 
         tl.set(venueImage, {
-            backgroundImage: `url(${targetImage})`
+            scale: 1,
+          backgroundImage: `url(${targetImage})`
         }).to(venueImageWrap, {
-            duration: 0.5,
-            autoAlpha: 1
+          scale: 1,
+          duration: 1,
+          autoAlpha: 1
         });
     } else if (e.type === "mouseleave") {
         const tl = gsap.timeline();
 
         tl.to(venueImageWrap, {
-            duration: 0.5,
-            autoAlpha: 0
+          scale: 0,
+          duration: 1,
+          autoAlpha: 0,
         });
     }
 }
